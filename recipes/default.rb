@@ -28,7 +28,7 @@ end
 
 # replace with firewall cookbook when centos is supported
 execute "disable iptables" do
-  command "/etc/init.d/iptables stop"
+  command '/sbin/iptables -F; /etc/init.d/iptables save; /sbin/iptables -L'
   action :run
   only_if { platform_family?('rhel') }
 end

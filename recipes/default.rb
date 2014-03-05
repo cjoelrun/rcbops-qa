@@ -18,7 +18,7 @@
 
 include_recipe "yum::epel" if platform_family?('rhel')
 
-package "openssh-clients" do
+package "openssh-client" do
   action :install
   only_if { platform_family?('rhel') }
 end

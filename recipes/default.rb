@@ -17,7 +17,7 @@
 # limitations under the License.
 
 include_recipe "yum::epel" if platform_family?('rhel')
-
+include_recipe "apt"
 include_recipe "openssh"
 
 package "git" do

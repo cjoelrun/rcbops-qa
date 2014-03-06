@@ -9,3 +9,4 @@ recipe "default", ""
   supports os
 end
 depends "yum"
+depends "openssh"
